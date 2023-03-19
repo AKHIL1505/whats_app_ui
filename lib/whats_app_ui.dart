@@ -12,6 +12,90 @@ class WhatsApp extends StatefulWidget {
   State<WhatsApp> createState() => _WhatsAppState();
 }
 
+var name = [
+  "Thor",
+  "Hulk",
+  "Iron Man",
+  "Captain America",
+  "Black Panther",
+  "Ant Man",
+  "Doctor Strange",
+  "Spider Man",
+  "Dead Pool"
+];
+var message = [
+  "Purushuvinu Ippo Yudham Onnum Ille.",
+  "Aareda Naari Nee",
+  "Varu Namukkonnu Kandam Vazhi Odiyittu Varam",
+  "Thalararuth Raman Kuttee",
+  "Wonderful. Onnaanmtharam aayittund.",
+  "Kaavile Pattumalsarathinu Kaanaam",
+  " Ee Kittiyath Onnumalla. Sharikkullath Kittaan Pokunnathe Ullu.",
+  "Makeupinu Okke Oru Paridhi Illede",
+  "Poda"
+];
+var image = [
+  "assets/Icons/Thor.jpg",
+  "assets/Icons/Hulk.jpg",
+  "assets/Icons/IronMan.jpg",
+  "assets/Icons/Captain America.jpg",
+  "assets/Icons/Black Panther.jpg",
+  "assets/Icons/Ant Man.jpg",
+  "assets/Icons/Doctor Strange.jpg",
+  "assets/Icons/Spider Man.jpg",
+  "assets/Icons/Deadpool.jpg"
+];
+var timing = [
+  "10:23 am",
+  "10:50 am",
+  "11:05 am",
+  "1:56 pm",
+  "2:19 pm",
+  "3:01 pm",
+  "5:10 pm",
+  "Yesterday",
+  "Yesterday"
+];
+
+var myIcons = [
+  const Icon(
+    Icons.done_all,
+    color: Colors.blueAccent,
+  ),
+  const Icon(
+    Icons.done,
+    color: Colors.grey,
+  ),
+  const Icon(
+    Icons.done_all,
+    color: Colors.grey,
+  ),
+  const Icon(
+    Icons.missed_video_call,
+    color: Colors.red,
+  ),
+  const Icon(
+    Icons.do_not_disturb_alt,
+    color: Colors.grey,
+  ),
+  const Icon(
+    Icons.keyboard_voice_rounded,
+    color: Colors.blueAccent,
+  ),
+  const Icon(
+    Icons.image,
+    color: Colors.grey,
+  ),
+  const Icon(
+    Icons.done_all,
+    color: Colors.grey,
+  ),
+  const Icon(
+    Icons.done_all,
+    color: Colors.blueAccent,
+  )
+];
+
 class _WhatsAppState extends State<WhatsApp> {
   @override
   Widget build(BuildContext context) {
@@ -19,7 +103,7 @@ class _WhatsAppState extends State<WhatsApp> {
       length: 4,
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: const Color(0xff128C7E ),
+          backgroundColor: const Color(0xff128C7E),
           title: const Text("WhatsApp"),
           actions: const [
             Padding(
@@ -40,7 +124,6 @@ class _WhatsAppState extends State<WhatsApp> {
             tabs: [
               Tab(
                 child: Icon(Icons.people),
-                iconMargin: EdgeInsets.all(100),
               ),
               Tab(
                 text: "Chats",
@@ -55,229 +138,43 @@ class _WhatsAppState extends State<WhatsApp> {
             indicatorSize: TabBarIndicatorSize.tab,
           ),
         ),
-        body: ListView(children: [
-          ListTile(
-            title: const Text(
-              "Thor",
-              style: TextStyle(fontWeight: FontWeight.w500),
-            ),
-            subtitle: Row(
-              children: const [
-                Icon(
-                  Icons.done_all,
-                  color: Colors.blueAccent,
-                ),
-                Expanded(
-                  child: Padding(
-                    padding: EdgeInsets.only(left: 5),
-                    child: Text(
-                      "Purushuvinu Ippo Yudham Onnum Ille.",
-                      maxLines: 1,
-                      overflow: TextOverflow.ellipsis,
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            leading: const CircleAvatar(
-              radius: 25,
-              backgroundImage: AssetImage("assets/Icons/Thor.jpg"),
-            ),
-            trailing: const Text("10:23 am"),
+
+        ///APP BAR ENDING
+
+        body: TabBarView(children: [
+          Image.asset(
+            "assets/Image/404.jpg",
+            fit: BoxFit.cover,
           ),
-          ListTile(
-            title: const Text(
-              "Hulk",
-              style: TextStyle(fontWeight: FontWeight.w500),
-            ),
-            subtitle: Row(
-              children: const [
-                Icon(
-                  Icons.done,
-                  color: Colors.grey,
-                ),
-                Text("Aareda Naari Nee"),
-              ],
-            ),
-            leading: const CircleAvatar(
-                radius: 25,
-                backgroundImage: AssetImage(
-                  "assets/Icons/Hulk.jpg",
-                )),
-            trailing: const Text("10:50 am"),
+          ListView(
+            children: List.generate(
+                9,
+                (index) => ListTile(
+                      title: Text(
+                        name[index],
+                        style: const TextStyle(fontWeight: FontWeight.w500),
+                      ),
+                      subtitle: Row(
+                        children: [
+                          myIcons[index],
+                          Expanded(
+                              child: Padding(
+                            padding: const EdgeInsets.only(left: 5),
+                            child: Text(
+                              message[index],
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                          )),
+                        ],
+                      ),
+                      leading: CircleAvatar(
+                          radius: 25,
+                          backgroundImage: AssetImage(image[index])),
+                      trailing: Text(timing[index]),
+                    )),
           ),
-          ListTile(
-            title: const Text(
-              "Iron Man",
-              style: TextStyle(fontWeight: FontWeight.w500),
-            ),
-            subtitle: Row(
-              children: const [
-                Icon(
-                  Icons.done_all,
-                  color: Colors.grey,
-                ),
-                Expanded(
-                    child: Padding(
-                  padding: EdgeInsets.only(left: 5),
-                  child: Text(
-                    "Varu Namukkonnu Kandam Vazhi Odiyittu Varam",
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                )),
-              ],
-            ),
-            leading: const CircleAvatar(
-                radius: 25,
-                backgroundImage: AssetImage(
-                  "assets/Icons/IronMan.jpg",
-                )),
-            trailing: const Text("11:05 am"),
-          ),
-          ListTile(
-            title: const Text(
-              "Captain America",
-              style: TextStyle(fontWeight: FontWeight.w500),
-            ),
-            subtitle: Row(
-              children: const [
-                Icon(
-                  Icons.missed_video_call,
-                  color: Colors.red,
-                ),
-                Padding(
-                  padding: EdgeInsets.only(left: 5),
-                  child: Text("Missed video call"),
-                ),
-              ],
-            ),
-            leading: const CircleAvatar(
-                radius: 25,
-                backgroundImage: AssetImage(
-                  "assets/Icons/Captain America.jpg",
-                )),
-            trailing: const Text("1:56 pm"),
-          ),
-          ListTile(
-            title: const Text(
-              "Black Panther",
-              style: TextStyle(fontWeight: FontWeight.w500),
-            ),
-            subtitle: Row(
-              children: const [
-                Icon(Icons.do_not_disturb_alt),
-                Padding(
-                  padding: EdgeInsets.only(left: 5),
-                  child: Text("This message was deleted"),
-                ),
-              ],
-            ),
-            leading: const CircleAvatar(
-                radius: 25,
-                backgroundImage: AssetImage(
-                  "assets/Icons/Black Panther.jpg",
-                )),
-            trailing: const Text("2:19 pm"),
-          ),
-          ListTile(
-            title: const Text(
-              "Ant Man",
-              style: TextStyle(fontWeight: FontWeight.w500),
-            ),
-            subtitle: Row(
-              children: const [
-                Icon(
-                  Icons.keyboard_voice_rounded,
-                  color: Colors.blue,
-                ),
-                Padding(
-                  padding: EdgeInsets.only(left: 5),
-                  child: Text("1:36"),
-                ),
-              ],
-            ),
-            leading: const CircleAvatar(
-                radius: 25,
-                backgroundImage: AssetImage(
-                  "assets/Icons/Ant Man.jpg",
-                )),
-            trailing: const Text("3:01 pm"),
-          ),
-          ListTile(
-            title: const Text(
-              "Doctor Strange",
-              style: TextStyle(fontWeight: FontWeight.w500),
-            ),
-            subtitle: Row(
-              children: const [
-                Icon(Icons.image),
-                Padding(
-                  padding: EdgeInsets.only(left: 5),
-                  child: Text("Photo"),
-                ),
-              ],
-            ),
-            leading: const CircleAvatar(
-                radius: 25,
-                backgroundImage: AssetImage(
-                  "assets/Icons/Doctor Strange.jpg",
-                )),
-            trailing: const Text("5:10 pm"),
-          ),
-          ListTile(
-            title: const Text(
-              "Spider Man",
-              style: TextStyle(fontWeight: FontWeight.w500),
-            ),
-            subtitle: Row(
-              children: const [
-                Icon(
-                  Icons.done_all,
-                  color: Colors.grey,
-                ),
-                Expanded(
-                  child: Padding(
-                    padding: EdgeInsets.only(left: 5),
-                    child: Text(
-                      "Makeupinu Okke Oru Paridhi Illede",
-                      maxLines: 1,
-                      overflow: TextOverflow.ellipsis,
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            leading: const CircleAvatar(
-                radius: 25,
-                backgroundImage: AssetImage("assets/Icons/Spider Man.jpg")),
-            trailing: const Text("Yesterday"),
-          ),
-          ListTile(
-            title: const Text(
-              "Dead Pool",
-              style: TextStyle(fontWeight: FontWeight.w500),
-            ),
-            subtitle: Row(
-              children: const [
-                Icon(
-                  Icons.done_all,
-                  color: Colors.blueAccent,
-                ),
-                Padding(
-                  padding: EdgeInsets.only(left: 5),
-                  child: Icon(
-                    Icons.heart_broken,
-                    color: Colors.red,
-                  ),
-                ),
-              ],
-            ),
-            leading: const CircleAvatar(
-                radius: 25,
-                backgroundImage: AssetImage("assets/Icons/Deadpool.jpg")),
-            trailing: const Text("Yesterday"),
-          ),
+          const Icon(Icons.car_crash),
+          const Icon(Icons.car_crash),
         ]),
         floatingActionButton: FloatingActionButton(
           onPressed: () {},
