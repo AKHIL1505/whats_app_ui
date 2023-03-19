@@ -1,6 +1,9 @@
 
 import 'package:flutter/material.dart';
 
+
+///CHAT PEOPLES
+
 var name = [
   "Thor",
   "Hulk",
@@ -12,6 +15,9 @@ var name = [
   "Spider Man",
   "Dead Pool"
 ];
+
+/// CHAT MESSAGE
+
 var message = [
   "Purushuvinu Ippo Yudham Onnum Ille.",
   "Aareda Naari Nee",
@@ -23,6 +29,9 @@ var message = [
   "Makeupinu Okke Oru Paridhi Illede",
   "Poda"
 ];
+
+/// PROFILE PICTURE
+
 var image = [
   "assets/Icons/Thor.jpg",
   "assets/Icons/Hulk.jpg",
@@ -34,6 +43,9 @@ var image = [
   "assets/Icons/Spider Man.jpg",
   "assets/Icons/Deadpool.jpg"
 ];
+
+/// CHATTING TIME
+
 var timing = [
   "10:23 am",
   "10:50 am",
@@ -45,6 +57,16 @@ var timing = [
   "Yesterday",
   "Yesterday"
 ];
+///FLOATING BUTTON ICONS
+
+var floatIcon = [
+  const Icon(Icons.ac_unit),
+  const Icon(Icons.message),
+  const Icon(Icons.add),
+  const Icon(Icons.add_call)
+];
+
+/// MESSAGE VIEWING STATUS
 
 var myIcons = [
   const Icon(

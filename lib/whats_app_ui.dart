@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'chat_details.dart';
+import 'Icons_and_details.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -15,6 +15,9 @@ class WhatsApp extends StatefulWidget {
 }
 
 class _WhatsAppState extends State<WhatsApp> {
+  int currentIndex = 0;
+
+
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -24,31 +27,30 @@ class _WhatsAppState extends State<WhatsApp> {
           backgroundColor: const Color(0xff128C7E),
           title: const Text("WhatsApp"),
           actions: [
-            IconButton(onPressed: () {}, icon: Icon(Icons.camera_alt_outlined)),
-            IconButton(onPressed: () {}, icon: Icon(Icons.search)),
-            IconButton(onPressed: () {}, icon: Icon(Icons.more_vert))
+            IconButton(onPressed: () {}, icon: const Icon(Icons.camera_alt_outlined)),
+            IconButton(onPressed: () {}, icon: const Icon(Icons.search)),
+            IconButton(onPressed: () {}, icon: const Icon(Icons.more_vert))
           ],
-          bottom: const TabBar(
-            labelStyle: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
-            tabs: [
-              Tab(
+          bottom: TabBar(
+            onTap: (tabIndex) {
+              setState(() {
+                currentIndex = tabIndex;
+              });
+            },
+            indicator: const UnderlineTabIndicator(
+                borderSide: BorderSide(color: Colors.white)),
+            labelStyle: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+            tabs: const [
+              Padding(
+                padding: EdgeInsets.all(8.0),
                 child: Icon(Icons.people),
               ),
-              Tab(
-                text: "Chats",
-              ),
-              Tab(
-                text: "Status",
-              ),
-              Tab(
-                text: "Calls",
-              ),
+              Text("Chats"),
+              Text("Status"),
+              Text("Calls"),
             ],
-            indicatorSize: TabBarIndicatorSize.tab,
           ),
         ),
-
-        ///APP BAR ENDING
 
         body: TabBarView(children: [
           Image.asset(
@@ -87,8 +89,8 @@ class _WhatsAppState extends State<WhatsApp> {
         ]),
         floatingActionButton: FloatingActionButton(
           onPressed: () {},
-          backgroundColor: const Color(0xff128C7E),
-          child: const Icon(Icons.chat),
+          backgroundColor: Color(0xff128C7E),
+          child: floatIcon[currentIndex],
         ),
       ),
     );
