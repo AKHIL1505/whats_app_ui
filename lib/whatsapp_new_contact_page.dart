@@ -29,14 +29,17 @@ class _NewContactsState extends State<NewContacts> {
             Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
+                children: const [
                   Text(
                     "Select contact",
                     style: TextStyle(fontSize: 19, fontWeight: FontWeight.bold),
                   ),
-                  Text(
-                    "125 contacts",
-                    style: TextStyle(fontSize: 13),
+                  Padding(
+                    padding: EdgeInsets.only(top: 3),
+                    child: Text(
+                      "13 contacts",
+                      style: TextStyle(fontSize: 13),
+                    ),
                   ),
                 ])
           ],

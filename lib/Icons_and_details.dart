@@ -153,8 +153,6 @@ var myIcons = [
   ),
 ];
 
-
-
 var newOption = ["New Group","New contact","New Community"];
 
 var newOptionIcons = [
