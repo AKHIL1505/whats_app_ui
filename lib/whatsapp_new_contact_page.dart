@@ -60,7 +60,7 @@ class _NewContactsState extends State<NewContacts> {
                 children: List.generate(
               newOption.length,
               (index) => ListTile(
-                title: Text(newOption[index]),
+                title: Text(newOption[index],style: TextStyle(fontWeight: FontWeight.bold),),
                 leading: CircleAvatar(
                   backgroundColor: Color(0xff128C7E),
                   radius: 25,
@@ -77,7 +77,7 @@ class _NewContactsState extends State<NewContacts> {
               children: List.generate(
                   name.length,
                   (index) => ListTile(
-                        title: Text(name[index]),
+                        title: Text(name[index],style: TextStyle(fontWeight: FontWeight.bold),),
                         subtitle: Text(bio[index]),
                         leading: CircleAvatar(
                             backgroundImage: AssetImage(image[index])),

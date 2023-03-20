@@ -154,6 +154,9 @@ var myIcons = [
 ];
 
 var newOption = ["New Group","New contact","New Community"];
+var qrCode=Icon(Icons.qr_code_outlined);
+
+
 
 var newOptionIcons = [
   Icon(
