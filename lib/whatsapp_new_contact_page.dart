@@ -61,7 +61,6 @@ class _NewContactsState extends State<NewContacts> {
               newOption.length,
               (index) => ListTile(
                 title: Text(newOption[index]),
-                //trailing: Icon(Icons.qr_code_outlined),
                 leading: CircleAvatar(
                   backgroundColor: Color(0xff128C7E),
                   radius: 25,
