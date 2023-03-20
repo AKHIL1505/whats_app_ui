@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'Icons_and_details.dart';
-//import 'select_contacts_menu.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -23,7 +22,7 @@ class _NewContactsState extends State<NewContacts> {
         title: Row(
           children: [
             Padding(
-              padding: const EdgeInsets.only(left: 0,right: 17),
+              padding: const EdgeInsets.only(left: 0, right: 17),
               child: IconButton(onPressed: () {}, icon: Icon(Icons.arrow_back)),
             ),
             Column(
