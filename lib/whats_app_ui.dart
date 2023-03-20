@@ -59,7 +59,7 @@ class _WhatsAppState extends State<WhatsApp> {
           ),
           ListView(
             children: List.generate(
-                9,
+                name.length,
                 (index) => ListTile(
                       title: Text(
                         name[index],

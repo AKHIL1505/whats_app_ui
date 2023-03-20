@@ -1,6 +1,4 @@
-
 import 'package:flutter/material.dart';
-
 
 ///CHAT PEOPLES
 
@@ -13,7 +11,11 @@ var name = [
   "Ant Man",
   "Doctor Strange",
   "Spider Man",
-  "Dead Pool"
+  "Dead Pool",
+  "Thanos",
+  "Wanda",
+  "Groot",
+  "Loki"
 ];
 
 /// CHAT MESSAGE
@@ -22,12 +24,16 @@ var message = [
   "Purushuvinu Ippo Yudham Onnum Ille.",
   "Aareda Naari Nee",
   "Varu Namukkonnu Kandam Vazhi Odiyittu Varam",
-  "Thalararuth Raman Kuttee",
-  "Wonderful. Onnaanmtharam aayittund.",
-  "Kaavile Pattumalsarathinu Kaanaam",
-  " Ee Kittiyath Onnumalla. Sharikkullath Kittaan Pokunnathe Ullu.",
+  "Missed video call",
+  "This message was deleted",
+  "0:07",
+  "Photo",
   "Makeupinu Okke Oru Paridhi Illede",
-  "Poda"
+  "Poda",
+  "Ee Kittiyath Onnumalla. Sharikkullath Kittaan Pokunnathe Ullu.",
+  "Ok",
+  "Done",
+  "No"
 ];
 
 /// PROFILE PICTURE
@@ -41,7 +47,11 @@ var image = [
   "assets/Icons/Ant Man.jpg",
   "assets/Icons/Doctor Strange.jpg",
   "assets/Icons/Spider Man.jpg",
-  "assets/Icons/Deadpool.jpg"
+  "assets/Icons/Deadpool.jpg",
+  "assets/Icons/Thanos.jpg",
+  "assets/Icons/Wanda.jpg",
+  "assets/Icons/Groot.jpg",
+  "assets/Icons/Loki.jpg"
 ];
 
 /// CHATTING TIME
@@ -55,8 +65,28 @@ var timing = [
   "3:01 pm",
   "5:10 pm",
   "Yesterday",
-  "Yesterday"
+  "Yesterday",
+  "Yesterday",
+  "Yesterday",
+  "Yesterday",
+  "Yesterday",
 ];
+var bio = [
+  "Keep it smile",
+  "This time will pass",
+  "Hey there! I am using WhatsApp",
+  "Available",
+  "Hey there! I am using WhatsApp",
+  "Busy",
+  "Available",
+  "Available",
+  "Available",
+  "Available",
+  "Available",
+  "Available",
+  "Available",
+];
+
 ///FLOATING BUTTON ICONS
 
 var floatIcon = [
@@ -104,5 +134,34 @@ var myIcons = [
   const Icon(
     Icons.done_all,
     color: Colors.blueAccent,
-  )
+  ),
+  const Icon(
+    Icons.done_all,
+    color: Colors.blueAccent,
+  ),
+  const Icon(
+    Icons.done_all,
+    color: Colors.blueAccent,
+  ),
+  const Icon(
+    Icons.done_all,
+    color: Colors.blueAccent,
+  ),
+  const Icon(
+    Icons.done_all,
+    color: Colors.blueAccent,
+  ),
+];
+
+
+
+var newOption = ["New Group","New contact","New Community"];
+
+var newOptionIcons = [
+  Icon(
+    Icons.people_alt,
+    color: Color(0xFFFFFFFF),
+  ),
+  Icon(Icons.person_add_sharp, color: Color(0xFFFFFFFF)),
+  Icon(Icons.people_sharp, color: Color(0xFFFFFFFF))
 ];
