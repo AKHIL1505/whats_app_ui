@@ -72,8 +72,8 @@ var timing = [
   "Yesterday",
 ];
 var bio = [
-  "Keep it smile",
-  "This time will pass",
+  " The God of Thunder",
+  "This time too shall pass",
   "Hey there! I am using WhatsApp",
   "Available",
   "Hey there! I am using WhatsApp",

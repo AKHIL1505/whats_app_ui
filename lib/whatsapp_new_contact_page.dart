@@ -53,7 +53,6 @@ class _NewContactsState extends State<NewContacts> {
         ],
       ),
       body: Container(
-        padding: EdgeInsets.only(top: 10),
         height: double.infinity,
         width: double.infinity,
         child: ListView(
