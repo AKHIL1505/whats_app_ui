@@ -18,6 +18,7 @@ var name = [
   "Loki"
 ];
 
+
 /// CHAT MESSAGE
 
 var message = [
@@ -153,16 +154,14 @@ var myIcons = [
   ),
 ];
 
-var newOption = ["New Group","New contact","New Community"];
-var qrCode=Icon(Icons.qr_code_outlined);
+var newOption = ["New Group", "New contact", "New Community"];
+var qrCode =[Text(" "),Icon(Icons.qr_code,size: 32,),Text(" ")];
+
 
 
 
 var newOptionIcons = [
-  Icon(
-    Icons.people_alt,
-    color: Color(0xFFFFFFFF),
-  ),
+  Icon(Icons.people_alt, color: Color(0xFFFFFFFF),),
   Icon(Icons.person_add_sharp, color: Color(0xFFFFFFFF)),
   Icon(Icons.people_sharp, color: Color(0xFFFFFFFF))
 ];

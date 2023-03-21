@@ -18,12 +18,12 @@ class _NewContactsState extends State<NewContacts> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xff128C7E),
+        backgroundColor: const Color(0xff128C7E),
         title: Row(
           children: [
             Padding(
               padding: const EdgeInsets.only(left: 0, right: 17),
-              child: IconButton(onPressed: () {}, icon: Icon(Icons.arrow_back)),
+              child: IconButton(onPressed: () {}, icon: const Icon(Icons.arrow_back)),
             ),
             Column(
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -46,12 +46,12 @@ class _NewContactsState extends State<NewContacts> {
         actions: [
           IconButton(
             onPressed: () {},
-            icon: Icon(Icons.search),
+            icon: const Icon(Icons.search),
           ),
-          IconButton(onPressed: () {}, icon: Icon(Icons.more_vert)),
+          IconButton(onPressed: () {}, icon: const Icon(Icons.more_vert)),
         ],
       ),
-      body: Container(
+      body: SizedBox(
         height: double.infinity,
         width: double.infinity,
         child: ListView(
@@ -60,12 +60,12 @@ class _NewContactsState extends State<NewContacts> {
                 children: List.generate(
               newOption.length,
               (index) => ListTile(
-                title: Text(newOption[index],style: TextStyle(fontWeight: FontWeight.bold),),
+                title: Text(newOption[index],style: const TextStyle(fontWeight: FontWeight.bold),),
                 leading: CircleAvatar(
-                  backgroundColor: Color(0xff128C7E),
+                  backgroundColor: const Color(0xff128C7E),
                   radius: 25,
                   child: newOptionIcons[index],
-                ),
+                ),trailing: qrCode[index],
               ),
             )),
             const Padding(
@@ -77,7 +77,7 @@ class _NewContactsState extends State<NewContacts> {
               children: List.generate(
                   name.length,
                   (index) => ListTile(
-                        title: Text(name[index],style: TextStyle(fontWeight: FontWeight.bold),),
+                        title: Text(name[index],style: const TextStyle(fontWeight: FontWeight.bold),),
                         subtitle: Text(bio[index]),
                         leading: CircleAvatar(
                             backgroundImage: AssetImage(image[index])),
